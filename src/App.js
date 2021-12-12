@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
-function App() {
-  useEffect(() => console.log("React rendered"));
+function App({ callback }) {
+  useEffect(() => console.log("React rendered"), []);
   return (
-    <div>
+    <div ref={callback}>
       <p>Hello World, React</p>
     </div>
   );
